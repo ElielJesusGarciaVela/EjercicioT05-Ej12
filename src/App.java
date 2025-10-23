@@ -3,14 +3,10 @@ public class App {
         System.out.println("Este programa muestra los n primeros números de la serie de Fibonacci.");
         int n = Integer.parseInt(System.console().readLine("Por favor, introduzca n: "));
         switch (n) {
-            case 1:
-                System.out.println("0");
-                break;
-            case 2:
-                System.out.println("0 1");
-                break;
-            default:
-            System.out.print("0 1");
+            case 1 -> System.out.println("0");
+            case 2 -> System.out.println("0 1");
+            default -> {
+                System.out.print("0 1");
                 int num1 = 0;
                 int num2 = 1;
                 int numAnterior;
@@ -21,7 +17,7 @@ public class App {
                     System.out.print(" "+num2);
                     n--;
                 }
-            break;
+            }
         }
 
     }
